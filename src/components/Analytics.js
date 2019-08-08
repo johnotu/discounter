@@ -1,6 +1,6 @@
 import React from 'react';
 
-import groups from './groups.json';
+// import groups from './groups.json';
 import TopNav from './TopNav';
 import SideNav from './SideNav';
 

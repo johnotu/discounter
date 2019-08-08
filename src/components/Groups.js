@@ -37,9 +37,9 @@ const Groups = props => {
                     <tr key={group.id} style={{ cursor: 'pointer' }} onClick={() => handleGroupClick(`${group.id}`)}>
                       <th scope="row">{index + 1}</th>
                       <td>{group.name}</td>
-                      <td>{group.discount_percentage}</td>
-                      <td>{group.signup_starts}</td>
-                      <td>{group.signup_ends}</td>
+                      <td>{group.discountPercentage}</td>
+                      <td>{group.signupStarts}</td>
+                      <td>{group.signupEnds}</td>
                     </tr>
                   ))
                 }

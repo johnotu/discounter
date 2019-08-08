@@ -2,27 +2,30 @@
   {
     "id": "1",
     "name": "One",
-    "signup_starts": "2019-08-08",
-    "signup_ends": "2019-08-09",
-    "remaining_members_trigger_number": [5, 3, 1],
-    "discount_percentage": 10,
-    "target_member_total": 10,
-    "signup_url": "http://localhost:3000/signup/1",
+    "signupStarts": "2019-08-08",
+    "signupEnds": "2019-08-09",
+    "emailTriggerNumbers": [5, 3, 1],
+    "discountPercentage": 10,
+    "totalMembers": 10,
+    "signupUrl": "http://localhost:3000/signup/1",
     "isActive": true,
     "members": [
       {
       "id": "11",
-      "name": "Member One",
+      "firstName": "One",
+      "lastName": "Oner",
       "email": "member-one@discounter.com"
     },
     {
       "id": "12",
-      "name": "Member Two",
+      "firstName": "Two",
+      "lastName": "Twoer",
       "email": "member-two@discounter.com"
     },
     {
       "id": "13",
-      "name": "Member Three",
+      "firstName": "Three",
+      "lastName": "Threer",
       "email": "member-three@discounter.com"
     }
     ]
@@ -30,32 +33,35 @@
   {
     "id": "2",
     "name": "Two",
-    "signup_starts": "2019-08-01",
-    "signup_ends": "2019-08-08",
-    "remaining_members_trigger_number": [
+    "signupStarts": "2019-08-01",
+    "signupEnds": "2019-08-08",
+    "emailTriggerNumbers": [
       5,
       3,
       1
     ],
-    "discount_percentage": 10,
-    "target_member_total": 10,
-    "signup_url": "http://localhost:3000/signup/2",
+    "discountPercentage": 10,
+    "totalMembers": 10,
+    "signupUrl": "http://localhost:3000/signup/2",
     "isActive": false,
-    "discount_code": "ABCD-3213-DEFG",
+    "discountCode": "ABCD-3213-DEFG",
     "members": [
       {
         "id": "11",
-        "name": "Member One",
+        "firstName": "One",
+        "lastName": "Oner",
         "email": "member-one@discounter.com"
       },
       {
         "id": "12",
-        "name": "Member Two",
+        "firstName": "Two",
+        "lastName": "Twoer",
         "email": "member-two@discounter.com"
       },
       {
         "id": "13",
-        "name": "Member Three",
+        "firstName": "Three",
+        "lastName": "Threer",
         "email": "member-three@discounter.com"
       }
     ]
@@ -63,31 +69,34 @@
   {
     "id": "3",
     "name": "Three",
-    "signup_starts": "2019-08-08",
-    "signup_ends": "2019-08-09",
-    "remaining_members_trigger_number": [
+    "signupStarts": "2019-08-08",
+    "signupEnds": "2019-08-09",
+    "emailTriggerNumbers": [
       15,
       10,
       5
     ],
-    "discount_percentage": 20,
-    "target_member_total": 20,
-    "signup_url": "http://localhost:3000/signup/3",
+    "discountPercentage": 20,
+    "totalMembers": 20,
+    "signupUrl": "http://localhost:3000/signup/3",
     "isActive": true,
     "members": [
       {
         "id": "11",
-        "name": "Member One",
+        "firstName": "One",
+        "lastName": "Oner",
         "email": "member-one@discounter.com"
       },
       {
         "id": "12",
-        "name": "Member Two",
+        "firstName": "Two",
+        "lastName": "Twoer",
         "email": "member-two@discounter.com"
       },
       {
         "id": "13",
-        "name": "Member Three",
+        "firstName": "Three",
+        "lastName": "Threer",
         "email": "member-three@discounter.com"
       }
     ]
