@@ -3,7 +3,7 @@
     "id": "1",
     "name": "One",
     "signupStarts": "2019-08-08",
-    "signupEnds": "2019-08-09",
+    "signupEnds": "2019-08-20",
     "emailTriggerNumbers": [5, 3, 1],
     "discountPercentage": 10,
     "totalMembers": 10,

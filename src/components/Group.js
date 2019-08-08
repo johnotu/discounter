@@ -14,9 +14,16 @@ const Group = props => {
     ['Empty slots', group.totalMembers - group.members.length]
   ]);
 
-  const handleTriggerEmail = () => {
+  const handleReminderEmail = () => {
     /**
-     * Send templated email to group members
+     * Send templated reminder email to group members
+     */
+    alert('An email has been sent to current group members');
+  }
+
+  const handleDiscountEmail = () => {
+    /**
+     * Generate discount code, enable on shop backend and send templated email to group members to purchase
      */
     alert('An email has been sent to current group members');
   }
@@ -30,7 +37,10 @@ const Group = props => {
           <main role="main" className="col-md-9 ml-sm-auto col-lg-10 px-4">
             <div className="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
               <h1 className="h2">{group.name}</h1>
-              <button className="btn btn-info" disabled={group.totalMembers === group.members.length ? true : false} onClick={handleTriggerEmail} >Trigger Email</button>
+              <div>
+              <button className="btn btn-info mr-2" disabled={group.totalMembers === group.members.length ? true : false} onClick={handleReminderEmail} >Trigger reminder email</button>
+                <button className="btn btn-info" disabled={Date.now() >= new Date(group.signupEnds).getTime() ? false : true} onClick={handleDiscountEmail} >Send discount codes</button>
+              </div>
             </div>
             <div className="row align-items-center justify-content-center">
               <div className="col">
