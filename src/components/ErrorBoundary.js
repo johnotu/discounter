@@ -10,17 +10,23 @@ export default class ErrorBoundary extends React.Component {
     return { hasError: true };
   }
 
+  handleButtonClick = () => {
+    this.props.history.push('/');
+  }
+
   componentDidCatch(error, info) {
     console.error(error, info);
   }
 
+  
+
   render() {
     if (this.state.hasError) {
       return (
-        <div className="container-fluid bg-light justify-content-center align-items-center" style={{height: '100vh'}}>
+        <div className="container-fluid bg-light justify-content-center align-items-center" style={{ height: '100vh' }}>
           <span role="img" aria-labelledby="Sad face emoji">😰</span>
           <h1 className="display-3">Oops! Something went wrong</h1>
-          <button className="btn btn-info">Go back to app</button>
+          <button className="btn btn-info" onClick={this.handleButtonClick}>Go back to app</button>
         </div>
       )
     }
