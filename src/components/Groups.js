@@ -3,7 +3,15 @@ import React from 'react';
 import groups from './groups.json';
 
 const Groups = props => {
+
+  const handleGroupClick = id => {
+    props.history.push(`/group/${id}`);
+  }
   return (
+    <div>
+      <div className="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
+        <h1 className="h2">Groups</h1>
+      </div>
     <table className="table">
       <thead>
         <tr>
@@ -17,7 +25,7 @@ const Groups = props => {
       <tbody>
         {
           groups.map((group, index) => (
-            <tr key={group.id} style={{ cursor: 'pointer' }}>
+            <tr key={group.id} style={{ cursor: 'pointer' }} onClick={() => handleGroupClick(`${group.id}`)}>
               <th scope="row">{index + 1}</th>
               <td>{group.name}</td>
               <td>{group.discount_percentage}</td>
@@ -28,7 +36,8 @@ const Groups = props => {
         }
 
       </tbody>
-    </table>
+      </table>
+    </div>
   );
 }
 
