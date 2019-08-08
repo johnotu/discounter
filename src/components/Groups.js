@@ -7,14 +7,14 @@ import SideNav from './SideNav';
 const Groups = props => {
 
   const handleGroupClick = id => {
-    props.history.push(`/${id}`);
+    props.history.push(`/group/${id}`);
   }
   return (
     <div className="admin">
       <TopNav />
       <div className="container-fluid">
         <div className="row">
-          <SideNav />
+          <SideNav groupsActive={true} />
           <main role="main" className="col-md-9 ml-sm-auto col-lg-10 px-4">
            
 

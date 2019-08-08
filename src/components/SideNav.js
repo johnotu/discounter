@@ -6,14 +6,10 @@ const SideNav = props => {
       <div className="sidebar-sticky">
         <ul className="nav flex-column">
           <li className="nav-item">
-            <a className="nav-link active" href="/">
-              <span data-feather="home"></span>
-              Groups <span className="sr-only">(current)</span>
-            </a>
+            <a className={`nav-link ${props.groupsActive ? 'active' : ''}`} href="/">Groups</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="/analytics">
-              {/* <span data-feather="file"></span> */}
+            <a className={`nav-link ${props.analyticsActive ? 'active' : ''}`} href="/analytics">
               Analytics
             </a>
           </li>
