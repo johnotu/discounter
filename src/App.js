@@ -1,12 +1,13 @@
 import React from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-import Groups from './components/groups';
+import Discounter from './components/discounter';
 
 const App = () => {
   return (
-    <div className="container">
-      <Groups />
-    </div>
+    <Router>
+      <Route path='/' exact component={Discounter} />
+    </Router>
   );
 }
 
