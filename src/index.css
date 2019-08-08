@@ -42,18 +42,8 @@ body .signup {
   color: #333;
 }
 
-.admin .sidebar .nav-link .feather {
-  margin-right: 4px;
-  color: #999;
-}
-
 .admin .sidebar .nav-link.active {
   color: #007bff;
-}
-
-.admin .sidebar .nav-link:hover .feather,
-.admin .sidebar .nav-link.active .feather {
-  color: inherit;
 }
 
 .admin .sidebar-heading {

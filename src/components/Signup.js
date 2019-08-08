@@ -10,7 +10,7 @@ const Signup = props => {
         <div className="jumbotron jumbotron-fluid">
             <div className="container">
           <h1 className="display-3 text-center">{group.name}</h1>
-          <h3 className="text-center">Total in group: {group.members.length}</h3>
+          <h3 className="text-center my-5">Total in group: {group.members.length}</h3>
             </div>
         </div>
         
