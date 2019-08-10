@@ -35,8 +35,10 @@ const Groups = props => {
                   <th scope="col">#</th>
                   <th scope="col">Name</th>
                   <th scope="col">Discount (%)</th>
-                  <th scope="col">Starts</th>
-                  <th scope="col">Ends</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Membership</th>
+                  <th scope="col">Start date</th>
+                  <th scope="col">End date</th>
                 </tr>
               </thead>
               <tbody>
@@ -46,6 +48,8 @@ const Groups = props => {
                       <th scope="row">{index + 1}</th>
                       <td>{group.name}</td>
                       <td>{group.discountPercentage}</td>
+                      <td>{group.isActive ? 'active' : 'expired'}</td>
+                      <td>{`${group.members.length}/${group.totalMembers}`}</td>
                       <td>{group.signupStarts}</td>
                       <td>{group.signupEnds}</td>
                     </tr>

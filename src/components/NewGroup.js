@@ -29,7 +29,8 @@ const NewGroup = props => {
   // Send new group data to API on-click
   // Note that on the backend, we assume that:
   // 1. isActive property is set to true by default.
-  // 2. On successfully creating a new group member:
+  // 2. members is set to an empty array by default.
+  // 3. On successfully creating a new group member:
   // // (a) A cron job is scheduled to run on signupEnds date to automate discount code generation and activation and send discount emails to group members.
   // // (b) signupUrl is generated in the format '<SERVER_BASE_URL>/signup/<GROUP_ID' and gorup data is updated.
   const handleGroupDataSubmit = () => {
