@@ -1,3 +1,7 @@
+/**
+ * Reusable top navigation component
+ */
+
 import React from 'react';
 
 const TopNav = props => {

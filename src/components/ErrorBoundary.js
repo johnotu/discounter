@@ -1,3 +1,7 @@
+/**
+ * Error boundary component to catch JavaScript errors in children components.
+ */
+
 import React from 'react';
 
 export default class ErrorBoundary extends React.Component {
@@ -6,20 +10,22 @@ export default class ErrorBoundary extends React.Component {
     this.state = { hasError: false };
   }
 
+  // Manage state to support fallback UI render
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
 
+  // Take user back to home from error page
   handleButtonClick = () => {
     this.props.history.push('/');
-  }
+  } 
 
+  // Log caught error to console
   componentDidCatch(error, info) {
     console.error(error, info);
   }
 
-  
-
+  // render fallback UI when an error has been caught
   render() {
     if (this.state.hasError) {
       return (

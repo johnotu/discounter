@@ -1,15 +1,23 @@
+/**
+ * Groups component to display all groups and some important detail
+ */
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+// Get dummy groups data
 import groups from './groups.json';
+
+// Other components
 import TopNav from './TopNav';
 import SideNav from './SideNav';
 
 const Groups = props => {
-
+  // Open a particular group data on-click
   const handleGroupClick = id => {
     props.history.push(`/group/${id}`);
   }
+  
   return (
     <div className="admin">
       <TopNav />

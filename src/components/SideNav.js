@@ -1,3 +1,7 @@
+/**
+ * Reusable side navigation component with active link props
+ */
+
 import React from 'react';
 
 const SideNav = props => {

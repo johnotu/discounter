@@ -1,16 +1,25 @@
+/**
+ * Dynamic signup page component that looks up group id param and renders specific group signup info
+ */
+
 import React, { useState } from 'react';
 
+// Get dummy groups data
 import groups from './groups.json';
 
 const Signup = props => {
+  // Get group data by id
+  // In production we would fetch group data by id
   const group = groups.find(discount => discount.id === props.match.params.id);
 
+  // Hold signup data in state with empty defaults
   const [signupData, setSignupData] = useState({
     firstName: '',
     lastName: '',
     email: ''
   });
 
+  // Manage signup input data in state on-change
   const handleSignupInputChange = e => {
     e.preventDefault();
     setSignupData({
@@ -18,6 +27,8 @@ const Signup = props => {
     });
   }
 
+  // Send signup data to backend.
+  // At backend after successful creation of new group member, the number of remaining members is calculated and if included in emailTriggerNumbers array, a reminder email is sent to current members
   const handleSignupDataSubmit = () => {
     //validate email
     if (!isEmailValid(signupData.email)) {
@@ -32,6 +43,7 @@ const Signup = props => {
     }
   }
 
+  // Email validation function
   const isEmailValid = email => {
     return /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(email);
   }

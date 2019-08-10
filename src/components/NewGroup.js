@@ -1,17 +1,24 @@
+/**
+ * NewGroup component to display form for creating a new discount group
+ */
+
 import React, { useState } from 'react';
 
+// Other dependent components
 import TopNav from './TopNav';
 import SideNav from './SideNav';
 
 const NewGroup = props => {
+  // Hold new group input data in state
   const [groupData, setGroupData] = useState({
     name: '',
-    signupStarts: new Date().toISOString().slice(0, 10),
-    signupEnds: new Date().toISOString().slice(0, 10),
-    totalMembers: 10,
-    discountPercentage: 10
+    signupStarts: new Date().toISOString().slice(0, 10), // Set today's date in input format
+    signupEnds: new Date().toISOString().slice(0, 10), // Set today's date in input format
+    totalMembers: 10, // Set smallest group number as default
+    discountPercentage: 10 // Set smallest group discount percentage as default
   });
 
+  // Manage group input in state onchange. On function to manage them all :)
   const handleGroupInputChange = e => {
     e.preventDefault();
     setGroupData({
@@ -19,11 +26,18 @@ const NewGroup = props => {
     });
   }
 
+  // Send new group data to API on-click
+  // Note that on the backend, we assume that:
+  // 1. isActive property is set to true by default.
+  // 2. On successfully creating a new group member:
+  // // (a) A cron job is scheduled to run on signupEnds date to automate discount code generation and activation and send discount emails to group members.
+  // // (b) signupUrl is generated in the format '<SERVER_BASE_URL>/signup/<GROUP_ID' and gorup data is updated.
   const handleGroupDataSubmit = () => {
     /**
      * send data to backend via API
      */
 
+    // Send user to all groups page
     props.history.push('/group');
   }
 

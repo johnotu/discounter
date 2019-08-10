@@ -1,12 +1,20 @@
+/**
+ * Group component to display a single group detail including a list of current membership
+ */
+
 import React, { useState } from 'react';
 import { Chart } from 'react-google-charts';
 
+
+// Get dummy group data
 import groups from './groups.json';
+
+// Get other components
 import TopNav from './TopNav';
 import SideNav from './SideNav';
 
 const Group = props => {
-
+  // State to hold group and chart data
   const [group, setGroup] = useState(groups.find(discount => discount.id === props.match.params.id));
   const [chartData, setChartData] = useState([
     ['Members', 'Number'],
@@ -14,6 +22,7 @@ const Group = props => {
     ['Empty slots', group.totalMembers - group.members.length]
   ]);
 
+  // Send reminder email on button click
   const handleReminderEmail = () => {
     /**
      * Send templated reminder email to group members
@@ -21,6 +30,7 @@ const Group = props => {
     alert('An email has been sent to current group members');
   }
 
+  // Send discount email on button click. Discount code is generated and activated server side
   const handleDiscountEmail = () => {
     /**
      * Generate discount code, enable on shop backend and send templated email to group members to purchase
@@ -42,6 +52,7 @@ const Group = props => {
                 <button className="btn btn-info" disabled={Date.now() >= new Date(group.signupEnds).getTime() ? false : true} onClick={handleDiscountEmail} >Send discount codes</button>
               </div>
             </div>
+            
             <div className="row align-items-center justify-content-center">
               <div className="col">
                 <Chart
@@ -63,6 +74,7 @@ const Group = props => {
                   rootProps={{ 'data-testid': '6' }}
                 />
               </div>
+              
               <div className="col">
                 <h5 >Status: <span className={group.isActive ? 'text-info' : 'text-danger'}>{group.isActive ? 'Active' : 'Expired'}</span></h5>
                 {group.isActive ? '' : <h5>Discount code: {group.discountCode}</h5>}
@@ -72,7 +84,6 @@ const Group = props => {
               </div>
             </div>
             
-      
             <h5>Members</h5>
             <table className="table">
               <thead>
@@ -84,17 +95,16 @@ const Group = props => {
                 </tr>
               </thead>
               <tbody>
-          {
-            group.members.map((member, index) => (
-              <tr key={member.id} >
-                <th scope="row">{index + 1}</th>
-                <td>{member.firstName}</td>
-                <td>{member.lastName}</td>
-                <td>{member.email}</td>
-              </tr>
-            ))
-          }
-
+                {
+                  group.members.map((member, index) => (
+                    <tr key={member.id} >
+                      <th scope="row">{index + 1}</th>
+                      <td>{member.firstName}</td>
+                      <td>{member.lastName}</td>
+                      <td>{member.email}</td>
+                    </tr>
+                  ))
+                }
               </tbody>
             </table>
           </main>
