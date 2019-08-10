@@ -48,7 +48,7 @@ const Group = props => {
             <div className="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
               <h1 className="h2">{group.name}</h1>
               <div>
-              <button className="btn btn-info mr-2" disabled={group.totalMembers === group.members.length ? true : false} onClick={handleReminderEmail} >Trigger reminder email</button>
+              <button className="btn btn-info mr-2" disabled={group.totalMembers === group.members.length || !group.isActive ? true : false} onClick={handleReminderEmail} >Trigger reminder email</button>
                 <button className="btn btn-info" disabled={Date.now() >= new Date(group.signupEnds).getTime() ? false : true} onClick={handleDiscountEmail} >Send discount codes</button>
               </div>
             </div>
@@ -74,7 +74,7 @@ const Group = props => {
                   rootProps={{ 'data-testid': '6' }}
                 />
               </div>
-              
+
               <div className="col">
                 <h5 >Status: <span className={group.isActive ? 'text-info' : 'text-danger'}>{group.isActive ? 'Active' : 'Expired'}</span></h5>
                 {group.isActive ? '' : <h5>Discount code: {group.discountCode}</h5>}
