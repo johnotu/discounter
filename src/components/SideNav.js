@@ -13,7 +13,7 @@ const SideNav = props => {
             <a className={`nav-link text-info ${props.groupsActive ? 'active' : ''}`} href="/">Groups</a>
           </li>
           <li className="nav-item">
-            <a className={`nav-link text-info disabled ${props.analyticsActive ? 'active' : ''}`} href="/analytics">
+            <a className={`nav-link text-info ${props.analyticsActive ? 'active' : ''}`} href="/analytics">
               Analytics
             </a>
           </li>
