@@ -5,9 +5,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-// Get dummy groups data
-import groups from './groups.json';
-
 // Other components
 import TopNav from './TopNav';
 import SideNav from './SideNav';
@@ -43,7 +40,7 @@ const Groups = props => {
               </thead>
               <tbody>
                 {
-                  groups.map((group, index) => (
+                  props.groups.map((group, index) => (
                     <tr key={group.id} style={{ cursor: 'pointer' }} onClick={() => handleGroupClick(`${group.id}`)}>
                       <th scope="row">{index + 1}</th>
                       <td>{group.name}</td>

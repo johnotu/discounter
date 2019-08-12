@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 
-import dummyGroups from './groups.json';
 import TopNav from './TopNav';
 import SideNav from './SideNav';
 
 const Groups = props => {
-  const [groups, setGroups] = useState(dummyGroups);
+  const [groups, setGroups] = useState(props.groups);
 
   const totalGroups = groups.length;
 
@@ -30,38 +29,38 @@ const Groups = props => {
 
             <div className="row">
               <div className="col-sm-6">
-                <div class="card text-center mb-4">
-                  <div class="card-body">
+                <div className="card text-center mb-4">
+                  <div className="card-body">
                     
-                    <h5 class="card-title display-4">{totalGroups}</h5>
-                    <p class="card-text lead">Total groups</p>
+                    <h5 className="card-title display-4">{totalGroups}</h5>
+                    <p className="card-text lead">Total groups</p>
                   </div>
                 </div>
               </div>
               <div className="col-sm-6">
-                <div class="card text-center mb-4">
-                  <div class="card-body">
+                <div className="card text-center mb-4">
+                  <div className="card-body">
                     
-                    <h5 class="card-title display-4">{totalActiveGroups}</h5>
-                    <p class="card-text lead">Active groups</p>
+                    <h5 className="card-title display-4">{totalActiveGroups}</h5>
+                    <p className="card-text lead">Active groups</p>
                   </div>
                 </div>
               </div>
               <div className="col-sm-6">
-                <div class="card text-center mb-4">
-                  <div class="card-body">
+                <div className="card text-center mb-4">
+                  <div className="card-body">
                     
-                    <h5 class="card-title display-4">{totalExpiredGroups}</h5>
-                    <p class="card-text lead">Expired groups</p>
+                    <h5 className="card-title display-4">{totalExpiredGroups}</h5>
+                    <p className="card-text lead">Expired groups</p>
                   </div>
                 </div>
               </div>
               <div className="col-sm-6">
-                <div class="card text-center mb-4">
-                  <div class="card-body">
+                <div className="card text-center mb-4">
+                  <div className="card-body">
                     
-                    <h5 class="card-title display-4">{`${totalActiveMembers}/${totalMembersExpected}`}</h5>
-                    <p class="card-text lead">Active groups membership</p>
+                    <h5 className="card-title display-4">{`${totalActiveMembers}/${totalMembersExpected}`}</h5>
+                    <p className="card-text lead">Active groups membership</p>
                   </div>
                 </div>
               </div>

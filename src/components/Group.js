@@ -5,17 +5,13 @@
 import React, { useState } from 'react';
 import { Chart } from 'react-google-charts';
 
-
-// Get dummy group data
-import groups from './groups.json';
-
 // Get other components
 import TopNav from './TopNav';
 import SideNav from './SideNav';
 
 const Group = props => {
   // State to hold group and chart data
-  const [group, setGroup] = useState(groups.find(discount => discount.id === props.match.params.id));
+  const [group, setGroup] = useState(props.group);
   const [chartData, setChartData] = useState([
     ['Members', 'Number'],
     ['Members', group.members.length],

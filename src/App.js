@@ -1,9 +1,12 @@
 /**
- * App component to manage routing
+ * App component to manage routing and hold groups data in state
  */
 
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+
+// Get dummy groups daata
+import groups from './util/groups.json';
 
 import Groups from './components/Groups';
 import Group from './components/Group';
@@ -16,11 +19,11 @@ const App = () => {
   return (
     <ErrorBoundary>
     <Router>
-      <Route path='/' exact component={Groups} />
-      <Route path='/group' exact component={Groups} />
-      <Route path='/group/:id' exact component={Group} />
-      <Route path='/signup/:id' exact component={Signup} />
-      <Route path='/analytics' exact component={Analytics} />
+      <Route path='/' exact render={props =>  <Groups {...props} groups={groups} />} />
+      <Route path='/group' exact render={props => <Groups {...props} groups={groups} />} />
+        <Route path='/group/:id' exact render={props => <Group {...props} group={groups.find(group => group.id === props.match.params.id)} />} />
+        <Route path='/signup/:id' exact render={props => <Signup {...props} group={groups.find(group => group.id === props.match.params.id)} />} />
+      <Route path='/analytics' exact render={props => <Analytics {...props} groups={groups} />} />
       <Route path='/new-group' exact component={NewGroup} />
       </Router>
     </ErrorBoundary>

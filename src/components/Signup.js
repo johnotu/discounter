@@ -4,13 +4,9 @@
 
 import React, { useState } from 'react';
 
-// Get dummy groups data
-import groups from './groups.json';
-
 const Signup = props => {
-  // Get group data by id
-  // In production we would fetch group data by id
-  const group = groups.find(discount => discount.id === props.match.params.id);
+  // Get group data
+  const { group } = props;
 
   // Hold signup data in state with empty defaults
   const [signupData, setSignupData] = useState({
