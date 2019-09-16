@@ -10,10 +10,10 @@ const SideNav = props => {
       <div className="sidebar-sticky">
         <ul className="nav flex-column">
           <li className="nav-item">
-            <a className={`nav-link text-info ${props.groupsActive ? 'active' : ''}`} href="/">Groups</a>
+            <a className={`nav-link ${props.groupsActive ? 'active' : ''}`} href="/">Groups</a>
           </li>
           <li className="nav-item">
-            <a className={`nav-link text-info ${props.analyticsActive ? 'active' : ''}`} href="/analytics">
+            <a className={`nav-link ${props.analyticsActive ? 'active' : ''}`} href="/analytics">
               Analytics
             </a>
           </li>
