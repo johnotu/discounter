@@ -7,6 +7,7 @@ import React, { useState } from 'react';
 const Signup = props => {
   // Get group data
   const { group } = props;
+  console.log('group', group);
 
   // Hold signup data in state with empty defaults
   const [signupData, setSignupData] = useState({
@@ -57,16 +58,16 @@ const Signup = props => {
           <div className="row my-5">
           <div className="col-md-6 px-5">
             <h2 className="my-5">How does it work?</h2>
-            <p className="lead" style={{ fontSize: '24px' }}>Add your name to the group by midnight <span className="font-weight-bold">{new Date(group.signup_ends).toDateString()}</span>. After the deadline, once we have reached <span>{group.target_member_total}</span> sign-ups, we will open the group discount for you to purchase your discounted access! </p>
+            <p className="lead" style={{ fontSize: '24px' }}>Add your name to the group by midnight <span className="font-weight-bold">{new Date(group.signupEnds).toDateString()}</span>. After the deadline, once we have reached <span>{group.totalMembers}</span> sign-ups, we will open the group discount for you to purchase your discounted access! </p>
             <div className="row my-5">
             <div className="col-md-4">
-              <p className="text-info lead font-weight-bold">{group.target_member_total}</p>
+              <p className="text-info lead font-weight-bold">{group.totalMembers}</p>
             </div>
             <div className="col-md-4">
               <p className="lead font-weight-bold">person group </p>
             </div>
             <div className="col-md-4">
-              <p className="text-info lead font-weight-bold float-right">{group.discount_percentage}%</p>
+              <p className="text-info lead font-weight-bold float-right">{group.discountPercentage}%</p>
               </div>
             </div>
 
