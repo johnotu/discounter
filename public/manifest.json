@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Discounter",
+  "name": "Handle group discounts",
   "icons": [
     {
       "src": "favicon.ico",
