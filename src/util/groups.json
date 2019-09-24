@@ -7,7 +7,7 @@
     "emailTriggerNumbers": [5, 3, 1],
     "discountPercentage": 10,
     "totalMembers": 10,
-    "signupUrl": "http://localhost:3000/signup/1",
+    "signupUrl": "http://localhost:3000/group-signup/1",
     "isActive": true,
     "members": [
       {
@@ -42,7 +42,7 @@
     ],
     "discountPercentage": 10,
     "totalMembers": 10,
-    "signupUrl": "http://localhost:3000/signup/2",
+    "signupUrl": "http://localhost:3000/group-signup/2",
     "isActive": false,
     "discountCode": "ABCD-3213-DEFG",
     "members": [
@@ -78,7 +78,7 @@
     ],
     "discountPercentage": 20,
     "totalMembers": 20,
-    "signupUrl": "http://localhost:3000/signup/3",
+    "signupUrl": "http://localhost:3000/group-signup/3",
     "isActive": true,
     "members": [
       {
