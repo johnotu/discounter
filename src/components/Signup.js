@@ -94,10 +94,10 @@ const Signup = props => {
             <div className="form-group mb-2">
               <label htmlFor="email" className="">Email</label>
               <input type="email" className="form-control" id="email" name="email" value={signupData.email} onChange={handleSignupInputChange} />
-              <small>Please enter your DISCOUNTER email address if available</small>
+              {/* <small>Please enter your DISCOUNTER email address if available</small> */}
             </div>
             
-            <button type="submit" className="btn btn-info mb-2 btn-block mt-4" onClick={handleSignupDataSubmit}>Submit</button>
+            <button type="submit" className="btn btn-outline-info mb-2 btn-block mt-4" onClick={handleSignupDataSubmit}>Submit</button>
           </div>
         </div>
       </div>

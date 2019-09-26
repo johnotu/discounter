@@ -44,8 +44,8 @@ const Group = props => {
             <div className="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
               <h1 className="h2">{group.name}</h1>
               <div>
-              <button className="btn btn-info mr-2" disabled={group.totalMembers === group.members.length || !group.isActive ? true : false} onClick={handleReminderEmail} >Trigger reminder email</button>
-                <button className="btn btn-info" disabled={Date.now() >= new Date(group.signupEnds).getTime() ? false : true} onClick={handleDiscountEmail} >Send discount codes</button>
+              <button className="btn btn-outline-info btn-sm mr-2" disabled={group.totalMembers === group.members.length || !group.isActive ? true : false} onClick={handleReminderEmail} >Trigger reminder email</button>
+                <button className="btn btn-outline-info btn-sm" disabled={Date.now() >= new Date(group.signupEnds).getTime() ? false : true} onClick={handleDiscountEmail} >Send discount codes</button>
               </div>
             </div>
             
