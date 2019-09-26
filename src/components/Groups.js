@@ -12,7 +12,7 @@ import SideNav from './SideNav';
 const Groups = props => {
   // Open a particular group data on-click
   const handleGroupClick = id => {
-    props.history.push(`/group/${id}`);
+    props.history.push(`/groups/${id}`);
   }
   
   return (
@@ -24,7 +24,7 @@ const Groups = props => {
           <main role="main" className="col-md-9 ml-sm-auto col-lg-10 px-4">
             <div className="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
               <h1 className="h2 text-info">Groups</h1>
-              <Link to="/new-group" className="btn btn-info">New group</Link>
+              <Link to="/new-group" className="btn btn-outline-info btn-sm">New group</Link>
             </div>
             <table className="table">
               <thead>
