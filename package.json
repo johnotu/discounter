@@ -8,6 +8,7 @@
     "react-dom": "^16.8.6",
     "react-feather": "^2.0.3",
     "react-google-charts": "^3.0.14",
+    "netlify-lambda": "^1.6.3",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1"
   },
