@@ -60,7 +60,7 @@ const Groups = props => {
                   <div className="card-body">
                     
                     <h5 className="card-title display-4">{`${totalActiveMembers}/${totalMembersExpected}`}</h5>
-                    <p className="card-text lead">Active groups membership</p>
+                    <p className="card-text lead">Active members</p>
                   </div>
                 </div>
               </div>
