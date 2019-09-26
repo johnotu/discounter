@@ -10,7 +10,7 @@ import groups from './util/groups.json';
 
 import Groups from './components/Groups';
 import Group from './components/Group';
-import Signup from './components/Signup';
+import Signup from './components/GroupSignup';
 import Analytics from './components/Analytics';
 import NewGroup from './components/NewGroup';
 import ErrorBoundary from './components/ErrorBoundary';
