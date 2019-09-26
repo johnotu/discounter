@@ -4,7 +4,7 @@ import TopNav from './TopNav';
 import SideNav from './SideNav';
 
 const Groups = props => {
-  const [groups, setGroups] = useState(props.groups);
+  const [groups] = useState(props.groups);
 
   const totalGroups = groups.length;
 

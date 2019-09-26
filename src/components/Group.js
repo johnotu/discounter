@@ -11,8 +11,8 @@ import SideNav from './SideNav';
 
 const Group = props => {
   // State to hold group and chart data
-  const [group, setGroup] = useState(props.group);
-  const [chartData, setChartData] = useState([
+  const [group] = useState(props.group);
+  const [chartData] = useState([
     ['Members', 'Number'],
     ['Members', group.members.length],
     ['Empty slots', group.totalMembers - group.members.length]

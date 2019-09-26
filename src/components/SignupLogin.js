@@ -5,7 +5,7 @@ import Login from './forms/Login';
 import Signup from './forms/Signup';
 
 const AccountSignup = props => {
-  const [action, setAction] = useState(props.action);
+  const [action] = useState(props.action);
   return (
     <div className="admin">
       <TopNav />
