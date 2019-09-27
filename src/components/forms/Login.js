@@ -4,7 +4,7 @@ const Login = () => {
   
   return (
     <div>
-      <p className="lead account-action-notice">Don't have an account? <a href="signup" className="btn btn-info">Signup</a></p>
+      <p className="lead account-action-notice">Don't have an account? <a href="signup" className="btn btn-outline-info btn-sm">Signup</a></p>
       {/* <h4 className="my-4">Login to your account</h4> */}
 
       <div className="form-group">
@@ -16,7 +16,7 @@ const Login = () => {
         <input className="form-control" type="password" name="adminPassword" id="adminPassword" />
       </div>
 
-      <button className="btn btn-info btn-lg btn-block mt-4">Login</button>
+      <button className="btn btn-outline-info btn-block mt-4">Login</button>
     </div>
   );
 }
