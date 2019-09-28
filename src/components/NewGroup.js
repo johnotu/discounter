@@ -74,7 +74,7 @@ const NewGroup = props => {
                 <input type="number" className="form-control" id="discount_percentage" name="discountPercentage" min="10" max="50" step="10" onChange={handleGroupInputChange} value={groupData.discountPercentage} />
               </div>
             </div>
-            <button className="btn btn-info my-4" onClick={handleGroupDataSubmit}>Create new group</button>
+            <button className="btn btn-outline-info my-4" onClick={handleGroupDataSubmit}>Create new group</button>
           </main>
         </div>
       </div>
