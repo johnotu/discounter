@@ -90,3 +90,7 @@ body .admin {
 .account-action-notice {
   margin-bottom: 30%;
 }
+
+.pointer {
+  cursor: pointer;
+}
