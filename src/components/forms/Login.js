@@ -4,8 +4,8 @@ const Login = () => {
   
   return (
     <div>
-      <p className="lead account-action-notice">Don't have an account? <a href="signup" className="btn btn-outline-info btn-sm">Signup</a></p>
-      {/* <h4 className="my-4">Login to your account</h4> */}
+      <p className="account-action-notice">Don't have an account? <a href="signup" className="btn btn-outline-info btn-sm">Signup</a></p>
+      <h4 className="my-4">Login to your account</h4>
 
       <div className="form-group">
         <label htmlFor="adminEmail">Email</label>

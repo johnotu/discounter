@@ -3,8 +3,8 @@ import React from 'react';
 const Signup = () => {
   return (
     <div>
-      <p className="lead account-action-notice">Already have an account? <a href="/login" className="btn btn-outline-info btn-sm">Login</a></p>
-      {/* <h4 className="my-4">Create an account</h4> */}
+      <p className="account-action-notice">Already have an account? <a href="/login" className="btn btn-outline-info btn-sm">Login</a></p>
+      <h4 className="my-4">Create a new account</h4>
       <div className="form-group">
         <label htmlFor="adminFirstName">First name</label>
         <input className="form-control" type="text" name="adminFirstName" id="adminFirstName" />
