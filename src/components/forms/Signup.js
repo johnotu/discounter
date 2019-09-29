@@ -1,34 +1,75 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { withRouter } from 'react-router-dom';
+import axios from 'axios';
+import { setData } from '../../util/store';
 
-const Signup = () => {
+const Signup = props => {
+  const [signupData, setSignupData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    password: '',
+    organisationName: ''
+  });
+
+  const handleChange = e => {
+    e.preventDefault();
+    setSignupData({ ...signupData, [e.target.name]: e.target.value });
+  }
+
+  const handleSubmit = () => {
+    axios(`${process.env.REACT_APP_API_SERVER_URL}/account`, {
+      headers: { 'content-type': 'application/json' },
+      method: 'post',
+      data: signupData
+    })
+      .then(response => {
+        if (response.status === 201) {
+          // set account data in localstore
+          setData('account', response.data.account);
+
+          // redirect to /groups
+          props.history.push('/groups');
+        } else {
+          // send a toast message for error signing up
+        }
+      })
+      .catch(err => {
+        console.error('error signing up', err);
+
+        // send a toast message, retry connection
+      });
+  }
+
   return (
     <div>
+      <form>
       <p className="account-action-notice">Already have an account? <a href="/login" className="btn btn-outline-info btn-sm">Login</a></p>
       <h4 className="my-4">Create a new account</h4>
       <div className="form-group">
-        <label htmlFor="adminFirstName">First name</label>
-        <input className="form-control" type="text" name="adminFirstName" id="adminFirstName" />
+        <label htmlFor="firstName">First name</label>
+        <input className="form-control" type="text" name="firstName" id="firstName" onChange={handleChange} />
       </div>
       <div className="form-group">
-        <label htmlFor="adminLastName">Last name</label>
-        <input className="form-control" type="text" name="adminLastName" id="adminLastName" />
+        <label htmlFor="lastName">Last name</label>
+        <input className="form-control" type="text" name="lastName" id="lastName" onChange={handleChange} />
       </div>
       <div className="form-group">
-        <label htmlFor="adminEmail">Email</label>
-        <input className="form-control" type="email" name="adminEmail" id="adminEmail" />
+        <label htmlFor="email">Email</label>
+        <input className="form-control" type="email" name="email" id="email" onChange={handleChange} />
       </div>
       <div className="form-group">
-        <label htmlFor="adminPassword">Password</label>
-        <input className="form-control" type="password" name="adminPassword" id="adminPassword" />
+        <label htmlFor="password">Password</label>
+        <input className="form-control" type="password" name="password" id="password" onChange={handleChange} />
       </div>
       <div className="form-group">
-        <label htmlFor="name">Company/Organisation name</label>
-        <input className="form-control" type="text" name="name" id="name" />
-      </div>
-      <button className="btn btn-outline-info btn-block mt-4">Signup</button>
-    </div>
-                  
+        <label htmlFor="organisationName">Company/Organisation name</label>
+        <input className="form-control" type="text" name="organisationName" id="organisationName" onChange={handleChange} />
+        </div>
+      </form>
+      <button className="btn btn-outline-info btn-block mt-4" onClick={handleSubmit}>Signup</button>
+    </div>              
   );
 }
 
-export default Signup;
+export default withRouter(Signup);
