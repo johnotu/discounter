@@ -94,3 +94,7 @@ body .admin {
 .pointer {
   cursor: pointer;
 }
+
+table tbody tr {
+  font-size: 0.8em;
+}
