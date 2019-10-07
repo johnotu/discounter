@@ -1,13 +1,4 @@
 steps:
-# Install
-- name: 'gcr.io/cloud-builders/yarn'
-  args: ['install']
-# Test
-- name: 'gcr.io/cloud-builders/yarn'
-  args: ['test']
-# Build
-- name: 'gcr.io/cloud-builders/yarn'
-  args: ['build']
-# Deploy
-- name: 'gcr.io/$PROJECT_ID/firebase'
-  args: ['deploy']
+- name: "gcr.io/cloud-builders/gcloud"
+  args: ["app", "deploy"]
+timeout: "1600s"
