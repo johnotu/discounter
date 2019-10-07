@@ -15,6 +15,7 @@ import Analytics from './components/Analytics';
 import NewGroup from './components/NewGroup';
 import ErrorBoundary from './components/ErrorBoundary';
 import SignupLogin from './components/SignupLogin';
+import Home from './components/Home';
 
 import { getData } from './util/store';
 
@@ -23,9 +24,9 @@ const App = () => {
   return (
     <ErrorBoundary>
     <Router>
-        <Route path='/' exact render={props => account ? <Groups {...props} groups={groups} /> : <Redirect to="/login" />} />
+        <Route path='/' exact component={Home} />
         {/* <Route path='/groups' exact render={props => <Groups {...props} groups={groups} />} /> */}
-        <Route path='/groups' exact component={Groups} />
+        <Route path='/groups' exact ender={props => account ? <Groups {...props} groups={groups} /> : <Redirect to="/login" />} />
         <Route path='/groups/:id' exact render={props => <Group {...props} group={groups.find(group => group.id === props.match.params.id)} />} />
         <Route path='/group-signup/:id' exact render={props => <GroupSignup {...props} group={groups.find(group => group.id === props.match.params.id)} />} />
       <Route path='/analytics' exact render={props => <Analytics {...props} groups={groups} />} />
