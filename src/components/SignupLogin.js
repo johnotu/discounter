@@ -8,7 +8,7 @@ const AccountSignup = props => {
   const [action] = useState(props.action);
   return (
     <div className="admin">
-      <TopNav />
+      <TopNav action />
     <main role="main">
     <div className="container py-5">
       <div className="row">
