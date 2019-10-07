@@ -15,6 +15,32 @@ handlers:
   - url: /
     static_files: build/index.html
     upload: build/index.html
+  - url: /login
+    static_files: build/index.html
+    upload: build/index.html
+  - url: /signup
+    static_files: build/index.html
+    upload: build/index.html
+  - url: /groups
+    static_files: build/index.html
+    upload: build/index.html
+  - url: /groups/(*)
+    static_files: build/index.html
+    upload: build/index.html
+  - url: /group-signup
+    static_files: build/index.html
+    upload: build/index.html
+  - url: /analytics
+    static_files: build/index.html
+    upload: build/index.html
+  - url: /new-group
+    static_files: build/index.html
+    upload: build/index.html
+  - url: /contact
+    static_files: build/index.html
+    upload: build/index.html
   - url: /.*
     static_files: build/index.html
     upload: build/index.html
+
+    
