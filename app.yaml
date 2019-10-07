@@ -24,7 +24,7 @@ handlers:
   - url: /groups
     static_files: build/index.html
     upload: build/index.html
-  - url: /groups/(*)
+  - url: /groups/(.*)
     static_files: build/index.html
     upload: build/index.html
   - url: /group-signup
