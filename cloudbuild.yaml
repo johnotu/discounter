@@ -4,10 +4,10 @@ steps:
   args: ['install']
 # Test
 - name: 'gcr.io/cloud-builders/yarn'
-  args: ['run', 'test:unit']
+  args: ['test']
 # Build
 - name: 'gcr.io/cloud-builders/yarn'
-  args: ['run', 'build']
+  args: ['build']
 # Deploy
 - name: 'gcr.io/$PROJECT_ID/firebase'
   args: ['deploy']
