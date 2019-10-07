@@ -1,9 +1,6 @@
 const setData = (key, value) => localStorage.setItem(key, JSON.stringify(value));
 
-const getData = key => {
-  if (localStorage.getItem(key) !== undefined) return JSON.parse(localStorage.getItem(key));
-  return null;
-}
+const getData = key => typeof localStorage.getItem(key) === undefined ? null :  JSON.parse(localStorage.getItem(key));
 
 const clearData = key => localStorage.clear(key);
 
