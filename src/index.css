@@ -81,7 +81,8 @@ body .admin {
 }
 
 .custom-toggler.navbar-toggler {
-    border-color: rgb(23, 162, 184);
+  border-color: rgb(23, 162, 184);
+  margin-right: 1rem;
 }
 .custom-toggler .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(23,162,184, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
@@ -110,4 +111,19 @@ body .admin {
 
 table tbody tr {
   font-size: 0.8em;
+}
+
+.home-content {
+  padding-right: 5%;
+  padding-left: 5%;
+}
+.landing-text {
+  padding: .5rem 1rem;
+  margin-top: 45%;
+}
+.landing-text .heading {
+  font-weight: 900;
+}
+.landing-image {
+  margin-top: 10rem;
 }
