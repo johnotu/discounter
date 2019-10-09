@@ -31,7 +31,8 @@ const App = () => {
         <Route path='/group-signup/:id' exact render={props => <GroupSignup {...props} group={groups.find(group => group.id === props.match.params.id)} />} />
       <Route path='/analytics' exact render={props => <Analytics {...props} groups={groups} />} />
         <Route path='/new-group' exact component={NewGroup} />
-        <Route path='/signup' exact render={props => <SignupLogin {...props} action='signup' />} />
+        {/* <Route path='/signup' exact render={props => <SignupLogin {...props} action='signup' />} /> */}
+        <Route path='/request-demo' exact render={props => <SignupLogin {...props} action='request-demo' />} />
         <Route path='/login' exact render={props => <SignupLogin {...props} action='login' />} />
       </Router>
     </ErrorBoundary>

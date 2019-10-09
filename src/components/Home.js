@@ -23,7 +23,7 @@ const Home = props => {
                     <p className="lead">
                       {/* Do you offer group discounts for your goods or services? */}
                       Discounter makes it easy to set up and manage group discounts from start to finish.</p>
-                    <a href="/signup" className="btn btn-info btn-lg">Create a free account</a>
+                    <a href="/request-demo" className="btn btn-info btn-lg">Request a demo</a>
                   </div>
                 </div>
                 <div className="col-md-6">
